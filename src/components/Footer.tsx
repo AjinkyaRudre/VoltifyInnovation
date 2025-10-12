@@ -80,7 +80,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-electric-blue mt-1 flex-shrink-0" />
-                <p className="text-gray-300">akash.dudhe@voltifyinnovation.in</p>
+                <p className="text-gray-300">info@voltifyinnovation.in</p>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-electric-blue mt-1 flex-shrink-0" />
@@ -99,7 +99,7 @@ export const Footer = () => {
                 <a href="https://wa.me/919970189950" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp className="w-5 h-5 text-green-500 hover:text-white transition" />
                 </a>
-                <a href="mailto:akash.dudhe@voltifyinnovation.in" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:info@voltifyinnovation.in" target="_blank" rel="noopener noreferrer">
                   <FaEnvelope className="w-5 h-5 text-red-400 hover:text-white transition" />
                 </a>
               </div>

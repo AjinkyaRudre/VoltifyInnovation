@@ -7,10 +7,10 @@ export const Header = () => {
         <div className="flex items-center space-x-2">
           <Mail className="h-4 w-4 text-electric-blue" />
           <a 
-            href="mailto:akash.dudhe@voltifyinnovation.in" 
+            href="mailto:info@voltifyinnovation.in" 
             className="text-sm hover:text-electric-blue transition-colors"
           >
-            akash.dudhe@voltifyinnovation.in
+            info@voltifyinnovation.in
           </a>
         </div>
         <div className="flex items-center space-x-2">
