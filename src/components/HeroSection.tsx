@@ -5,20 +5,13 @@ import Logo from "@/assets/voltify-logo.png";
 
 export const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero section">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-dark-gray/90 via-dark-gray/70 to-transparent"></div>
-      </div>
-
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-electric-blue rounded-full animate-electric-pulse"></div>
-        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-electric-blue-light rounded-full animate-electric-pulse delay-1000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-electric-blue rounded-full animate-electric-pulse delay-500"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
