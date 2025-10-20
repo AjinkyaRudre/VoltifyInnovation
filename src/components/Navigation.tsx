@@ -20,8 +20,8 @@ export const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-1">
-            <img src={Logo} alt="Voltify Logo" className="h-16 w-auto" />
-            <span className="text-xl font-bold text-dark-gray">
+            <img src={Logo} alt="Voltify Logo" className="h-10 md:h-16 w-auto" />
+            <span className="text-base md:text-xl font-bold text-dark-gray">
               Voltify Innovation
             </span>
           </div>
