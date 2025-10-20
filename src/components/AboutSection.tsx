@@ -25,7 +25,7 @@ export const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-light-gray">
+    <section id="about" className="py-20 bg-light-gray" aria-label="About section">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-dark-gray mb-6">

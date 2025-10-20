@@ -48,7 +48,7 @@ export const SectorsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section id="sectors" className="py-20 bg-white" aria-label="Sectors we serve">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-dark-gray mb-6">

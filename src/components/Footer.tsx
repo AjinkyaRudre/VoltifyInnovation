@@ -12,8 +12,8 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-1">
             <div className="mb-6 flex items-center space-x-1">
-              <img src={Logo} alt="Voltify Innovation Logo" className="h-16 w-auto" />
-              <span className="text-xl font-bold">Voltify Innovation</span>
+              <img src={Logo} alt="Voltify Innovation Logo" className="h-12 md:h-16 w-auto" />
+              <span className="text-lg md:text-xl font-bold">Voltify Innovation</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Licensed electrical engineering & contracting firm delivering expert solutions across residential, industrial, and commercial sectors.

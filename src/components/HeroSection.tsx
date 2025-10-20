@@ -5,7 +5,7 @@ import Logo from "@/assets/voltify-logo.png";
 
 export const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero section">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -14,46 +14,39 @@ export const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-dark-gray/90 via-dark-gray/70 to-transparent"></div>
       </div>
 
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-electric-blue rounded-full animate-electric-pulse"></div>
-        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-electric-blue-light rounded-full animate-electric-pulse delay-1000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-electric-blue rounded-full animate-electric-pulse delay-500"></div>
-      </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl text-white animate-fade-in">
-          <div className="flex items-center space-x-1 mb-6">
-            <img src={Logo} alt="Voltify Logo" className="h-[100px] w-auto" />
-            <h1 className="text-5xl md:text-7xl font-bold">
+          <div className="flex flex-col sm:flex-row items-center sm:space-x-1 mb-6">
+            <img src={Logo} alt="Voltify Logo" className="h-[60px] sm:h-[80px] md:h-[100px] w-auto mb-3 sm:mb-0" />
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-center sm:text-left">
               Voltify{" "} <span className="text-electric-blue">Innovation</span>
             </h1>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 animate-slide-in-left">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 animate-slide-in-left text-center sm:text-left">
             "We are a Service You Can Trust"
           </h2>
 
-          <p className="text-xl md:text-2xl mb-8 text-gray-300 animate-slide-in-left delay-200">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 text-gray-300 animate-slide-in-left delay-200 text-center sm:text-left">
             Licensed electrical engineering & contracting firm delivering expert solutions across residential, industrial, and commercial sectors.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 animate-slide-in-left delay-300">
-            <a href="#contact" className="w-fit">
+          <div className="flex flex-col sm:flex-row gap-4 animate-slide-in-left delay-300 items-center sm:items-start">
+            <a href="#contact" className="w-full sm:w-fit">
               <Button
                 size="lg"
-                className="bg-electric-blue hover:bg-electric-blue-dark text-white text-lg px-8 py-4 animate-electric-pulse"
+                className="w-full sm:w-auto bg-electric-blue hover:bg-electric-blue-dark text-white text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 animate-electric-pulse"
               >
                 Contact Us Now
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
               </Button>
             </a>
 
-            <a href="#services" className="w-fit">
+            <a href="#services" className="w-full sm:w-fit">
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-dark-gray text-lg px-8 py-4"
+                className="w-full sm:w-auto border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-dark-gray text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold transition-all duration-300"
               >
                 Our Services
               </Button>
@@ -61,22 +54,22 @@ export const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 animate-scale-in delay-500">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mt-12 sm:mt-16 animate-scale-in delay-500">
             <div className="text-center">
-              <div className="text-3xl font-bold text-electric-blue">15+</div>
-              <div className="text-sm text-gray-300">Projects Completed</div>
+              <div className="text-2xl sm:text-3xl font-bold text-electric-blue">15+</div>
+              <div className="text-xs sm:text-sm text-gray-300">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-electric-blue">24/7</div>
-              <div className="text-sm text-gray-300">Emergency Support</div>
+              <div className="text-2xl sm:text-3xl font-bold text-electric-blue">24/7</div>
+              <div className="text-xs sm:text-sm text-gray-300">Emergency Support</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-electric-blue">5+</div>
-              <div className="text-sm text-gray-300">Years Experience</div>
+              <div className="text-2xl sm:text-3xl font-bold text-electric-blue">5+</div>
+              <div className="text-xs sm:text-sm text-gray-300">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-electric-blue">100%</div>
-              <div className="text-sm text-gray-300">Licensed & Certified</div>
+              <div className="text-2xl sm:text-3xl font-bold text-electric-blue">100%</div>
+              <div className="text-xs sm:text-sm text-gray-300">Licensed & Certified</div>
             </div>
           </div>
         </div>
