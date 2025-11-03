@@ -75,7 +75,7 @@ export const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-electric-blue mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300">+91-9870189950</p>
+                  <p className="text-gray-300">+91-9970189950</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -102,6 +102,26 @@ export const Footer = () => {
                 <a href="mailto:info@voltifyinnovation.in" target="_blank" rel="noopener noreferrer">
                   <FaEnvelope className="w-5 h-5 text-red-400 hover:text-white transition" />
                 </a>
+                <a href="https://www.instagram.com/voltify_innovation/" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-pink-500 hover:text-white transition"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z" />
+                  </svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61583337623225" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-blue-600 hover:text-white transition"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M22.675 0h-21.35C.597 0 0 .593 0 1.326v21.348C0 23.407.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116c.728 0 1.325-.593 1.325-1.326V1.326C24 .593 23.403 0 22.675 0z" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -115,7 +135,7 @@ export const Footer = () => {
             </p>
             <div className="flex items-center space-x-6 mt-4 md:mt-0">
               <span className="text-sm text-gray-300">24/7 Emergency Support</span>
-              <span className="text-sm text-electric-blue font-semibold">+91-9870189950</span>
+              <span className="text-sm text-electric-blue font-semibold">+91-9970189950</span>
             </div>
           </div>
         </div>

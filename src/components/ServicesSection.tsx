@@ -99,7 +99,7 @@ export const ServicesSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
                 <div className="text-2xl font-bold">Emergency Helpline</div>
-                <div className="text-electric-blue-light">+91-9870189950</div>
+                <div className="text-electric-blue-light">+91-9970189950</div>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
                 <div className="text-2xl font-bold">Response Time</div>
