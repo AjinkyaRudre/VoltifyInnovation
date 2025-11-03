@@ -133,7 +133,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-dark-gray">Phone</h3>
-                    <p className="text-muted-foreground">+91-9870189950</p>
+                    <p className="text-muted-foreground">+91-9970189950</p>
                   </div>
                 </div>
               </CardContent>
@@ -300,7 +300,7 @@ export const ContactSection = () => {
         </div>
 
         {/* Google Maps */}
-        <div className="mt-16 animate-fade-in">
+        {/* <div className="mt-16 animate-fade-in">
           <Card className="shadow-lg border-0 overflow-hidden">
             <CardContent className="p-0">
               <div className="h-96 bg-gray-200 flex items-center justify-center">
@@ -315,6 +315,40 @@ export const ContactSection = () => {
                   title="Voltify Innovation Location"
                 ></iframe>
               </div>
+            </CardContent>
+          </Card>
+        </div> */}
+        {/* Google Maps */}
+        {/* Google Maps */}
+        <div className="mt-16 animate-fade-in">
+          <Card className="shadow-lg border-0 overflow-hidden">
+            <CardContent className="p-0">
+              {/* The anchor tag (<a>) wraps the map, making the entire map clickable and redirecting to the full Maps page */}
+              <a
+                href="https://maps.google.com/?cid=15694673190722270092&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNl"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Voltify Innovation on Google Maps"
+                className="block w-full h-96 relative"
+              >
+                <div className="h-full bg-gray-200 flex items-center justify-center">
+                  <iframe
+                    // This is the correct embed URL for Voltify Innovation's address.
+                    // The `&output=embed` parameter ensures it displays correctly within an iframe.
+                    // Note: Google Maps uses an encoded address in this format.
+                    src="https://maps.google.com/maps?q=Voltify+Innovation,+Bhosari,+Pune&t=&z=15&ie=UTF8&iwloc=B&output=embed"
+                    width="100%"
+                    height="384"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    // Removed referrerPolicy as it is not needed here
+                    title="Voltify Innovation Location"
+                  ></iframe>
+                  {/* Invisible overlay div to ensure the entire iframe area captures the click for the anchor tag */}
+                  <div className="absolute inset-0 z-10 cursor-pointer"></div>
+                </div>
+              </a>
             </CardContent>
           </Card>
         </div>
