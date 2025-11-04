@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Zap } from "lucide-react";
-import { FaLinkedin, FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaWhatsapp, FaEnvelope, FaYoutube } from "react-icons/fa";
 import Logo from "../assets/voltify-logo.png";
 
 export const Footer = () => {
@@ -121,6 +121,9 @@ export const Footer = () => {
                   >
                     <path d="M22.675 0h-21.35C.597 0 0 .593 0 1.326v21.348C0 23.407.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116c.728 0 1.325-.593 1.325-1.326V1.326C24 .593 23.403 0 22.675 0z" />
                   </svg>
+                </a>
+                <a href="https://www.youtube.com/@VoltifyInnovationPune" target="_blank" rel="noopener noreferrer">
+                  <FaYoutube className="w-5 h-5 text-red-600 hover:text-white transition" />  
                 </a>
               </div>
             </div>
