@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Logo from "@/assets/voltify-logo.png";
+import { isRouteErrorResponse, Link, useLocation, useNavigate } from "react-router-dom";
 
 const productLinks = [
   "Active Harmonic Filter",
@@ -26,20 +27,51 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isProductsOpenMobile, setIsProductsOpenMobile] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navLinks = [
-    { name: "Home", href: "#home" },
+    { name: "Home", href: "/", isRoute: true },
     { name: "About", href: "#about" },
     { name: "Products", href: "#products" },
     { name: "Services", href: "#services" },
     { name: "Why Choose Us", href: "#why-choose-us" },
-    { name: "Blog", href: "#blog" },
+    { name: "Blog", href: "/blog", isRoute: true },
     { name: "Contact", href: "#contact" },
   ];
 
+  const handleNavigation = (href: string) => {
+    if (location.pathname !== "/" && !href.startsWith("/")) {
+      // If not on home page and trying to navigate to a section, go to home first
+      const sectionId = href.substring(1);
+      navigate("/");
+      // Scroll to section after navigation completes
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else if (!href.startsWith("/")) {
+      // On home page, scroll to section
+      const sectionId = href.substring(1);
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   useEffect(() => {
+    // Only track scroll on home page
+    if (location.pathname !== "/") {
+      return;
+    }
+
     const handleScroll = () => {
-      const sections = navLinks.map((l) => l.href.substring(1));
+      const sections = navLinks
+        .filter(l => l.href.startsWith("#"))
+        .map((l) => l.href.substring(1));
       const scrollPosition = window.scrollY + 120;
 
       for (const sectionId of sections) {
@@ -58,7 +90,7 @@ export const Navigation = () => {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
@@ -105,6 +137,13 @@ export const Navigation = () => {
                               .replace(/\s+/g, "-")
                               .replace(/[()]/g, "")}`}
                             className="block text-sm text-gray-700 hover:text-electric-blue hover:pl-2 transition-all"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              handleNavigation(`#${product
+                                .toLowerCase()
+                                .replace(/\s+/g, "-")
+                                .replace(/[()]/g, "")}`);
+                            }}
                           >
                             {product}
                           </a>
@@ -113,7 +152,15 @@ export const Navigation = () => {
                     </ul>
                   </div>
                 </div>
-              ) : (
+              ) : link.isRoute ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-dark-gray hover:text-electric-blue font-medium"
+                  >
+                  {link.name}
+                  </Link>
+                  ) : (
                 <a
                   key={link.name}
                   href={link.href}
@@ -122,6 +169,10 @@ export const Navigation = () => {
                       ? "text-electric-blue"
                       : ""
                   }`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation(link.href);
+                  }}
                 >
                   {link.name}
                   {activeSection === link.href.substring(1) && (
@@ -176,7 +227,14 @@ export const Navigation = () => {
                             .replace(/\s+/g, "-")
                             .replace(/[()]/g, "")}`}
                           className="block text-sm text-gray-600 hover:text-electric-blue"
-                          onClick={() => setIsMenuOpen(false)}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleNavigation(`#${product
+                              .toLowerCase()
+                              .replace(/\s+/g, "-")
+                              .replace(/[()]/g, "")}`);
+                            setIsMenuOpen(false);
+                          }}
                         >
                           {product}
                         </a>
@@ -184,12 +242,25 @@ export const Navigation = () => {
                     </div>
                   )}
                 </div>
+              ) : link.isRoute ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="block py-2 text-dark-gray hover:text-electric-blue"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
               ) : (
                 <a
                   key={link.name}
                   href={link.href}
                   className="block py-2 text-dark-gray hover:text-electric-blue"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation(link.href);
+                    setIsMenuOpen(false);
+                  }}
                 >
                   {link.name}
                 </a>
