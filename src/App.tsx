@@ -5,7 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import BlogHub from "./pages/BlogHub";
 import BlogCaseStudy from "./pages/BlogCaseStudy";
+import ActiveHarmonicFilters from "./pages/ActiveHarmonicFilters";
 
 const queryClient = new QueryClient();
 
@@ -17,7 +19,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/blog" element={<BlogCaseStudy />} />
+          <Route path="/blog" element={<BlogHub />} />
+          <Route path="/blog/power-factor-harmonics" element={<BlogCaseStudy />} />
+          <Route path="/blog/active-harmonic-filters" element={<ActiveHarmonicFilters />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

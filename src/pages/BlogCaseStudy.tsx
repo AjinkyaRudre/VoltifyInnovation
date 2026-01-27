@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import RelatedBlogs from "@/components/RelatedBlogs";
 
 import caseImg1 from "@/assets/power-quality-1.png";
 import caseImg2 from "@/assets/power-quality-2.png";
+import ahfImg from "@/assets/Active_Harmonic_Filters.png";
 
 const BlogCaseStudy: React.FC = () => {
   return (
@@ -151,6 +154,27 @@ const BlogCaseStudy: React.FC = () => {
               compliance, and long-term operational safety.
             </p>
           </section>
+
+          {/* CTA */}
+          <section className="bg-gradient-to-r from-dark-gray to-electric-blue text-white rounded-xl p-8 text-center">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Optimize Your Power Factor?
+            </h3>
+            <p className="text-lg mb-6 opacity-90">
+              Contact Voltify Innovation to schedule your comprehensive Power Factor and Harmonics Study today.
+            </p>
+            <a
+              href={`https://wa.me/919970189950?text=${encodeURIComponent("Hi! I would like to schedule a Power Factor and Harmonics Study for my facility. Can you provide more details?")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-electric-blue font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
+            >
+              Contact Us
+            </a>
+          </section>
+
+          {/* Related Blogs */}
+          <RelatedBlogs currentBlogSlug="power-factor-harmonics" />
         </div>
       </main>
 
