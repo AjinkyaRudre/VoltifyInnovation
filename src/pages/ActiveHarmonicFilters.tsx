@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Navigation } from "@/components/Navigation";
@@ -10,11 +10,37 @@ import workingPrincipleImg from "@/assets/Working-principle-of-active-harmonic-f
 import caseImg from "@/assets/power-quality-1.png";
 
 const ActiveHarmonicFilters: React.FC = () => {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollButton(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <>
-      {/* Global Header & Navbar */}
       <Header />
       <Navigation />
+
+      {/* Back to Blog Arrow */}
+      <div className="bg-gray-50 py-4">
+        <div className="max-w-6xl mx-auto px-4">
+          <Link
+            to="/blog"
+            className="inline-flex items-center text-electric-blue hover:text-dark-gray font-semibold transition"
+          >
+            <span className="mr-2">←</span>
+            Back to Blog
+          </Link>
+        </div>
+      </div>
 
       <main className="bg-gray-50 text-gray-800">
         {/* Hero Section */}
@@ -32,7 +58,7 @@ const ActiveHarmonicFilters: React.FC = () => {
         {/* Content */}
         <div className="max-w-6xl mx-auto px-4 py-14 space-y-14">
           {/* Introduction */}
-          <section>
+          <section id="power-quality">
             <h2 className="text-2xl font-bold mb-4 text-dark-gray">
               The Power Quality Challenge
             </h2>
@@ -64,7 +90,7 @@ const ActiveHarmonicFilters: React.FC = () => {
           </section>
 
           {/* Are Harmonics Affecting Your System */}
-          <section>
+          <section id="affecting-system">
             <h2 className="text-2xl font-bold mb-4 text-dark-gray">
               Are Harmonics Affecting Your Electrical System?
             </h2>
@@ -157,7 +183,7 @@ const ActiveHarmonicFilters: React.FC = () => {
           </section>
 
           {/* The Solution */}
-          <section>
+          <section id="how-ahf-works">
             <h2 className="text-2xl font-bold mb-4 text-dark-gray">
               The Solution: Active Harmonic Filters
             </h2>
@@ -174,7 +200,7 @@ const ActiveHarmonicFilters: React.FC = () => {
           </section>
 
           {/* How Active Harmonic Filters Work */}
-          <section>
+          <section id="how-ahf-works">
             <h2 className="text-2xl font-bold mb-4 text-dark-gray">
               How Active Harmonic Filters Work
             </h2>
@@ -298,6 +324,30 @@ const ActiveHarmonicFilters: React.FC = () => {
 
       {/* Footer */}
       <Footer />
+
+      {/* Scroll to Top Button */}
+      {showScrollButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 bg-electric-blue hover:bg-dark-gray text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-40"
+          aria-label="Scroll to top"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 10l7-7m0 0l7 7m-7-7v18"
+            />
+          </svg>
+        </button>
+      )}
     </>
   );
 };

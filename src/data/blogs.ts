@@ -32,17 +32,28 @@ export const BLOG_POSTS: BlogPost[] = [
     image: "Active_Harmonic_Filters.png",
     component: "ActiveHarmonicFilters",
   },
-  // Add new blogs here following the same structure
-  // {
-  //   id: "3",
-  //   title: "Your New Blog Title",
-  //   excerpt: "Brief description...",
-  //   slug: "your-blog-slug",
-  //   category: "Category Name",
-  //   date: "2024",
-  //   image: "image-filename.png",
-  //   component: "YourComponentName",
-  // },
+  {
+    id: "3",
+    title: "The Importance of Preventive Maintenance for UPS Systems",
+    excerpt:
+      "Maximize uptime and extend equipment life with structured UPS preventive maintenance plans that prevent costly emergency failures and reduce operational risks.",
+    slug: "ups-preventive-maintenance",
+    category: "Guide",
+    date: "January 2026",
+    image: "UPS-System-Maintenance.jpg",
+    component: "UPSMaintenance",
+  },
+  {
+    id: "4",
+    title: "Applying Infrared Thermography to Predictive Maintenance",
+    excerpt:
+      "Learn how thermal imaging detects equipment faults early, enabling proactive maintenance, reducing downtime, and delivering up to 10x ROI.",
+    slug: "infrared-thermography",
+    category: "Technical Guide",
+    date: "January 2026",
+    image: "Infrared-thermography/Infrared-Thermography-1.png",
+    component: "InfraredThermography",
+  },
 ];
 
 /**
