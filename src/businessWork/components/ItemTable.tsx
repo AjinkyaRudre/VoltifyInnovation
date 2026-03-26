@@ -105,10 +105,10 @@ export default function ItemTable(props: ItemTableProps) {
                 <th className="w-14 p-2">Sr No</th>
                 <th className="p-2">Description</th>
                 <th className="w-24 p-2">HSN Code</th>
-                <th className="w-20 p-2">Qty</th>
-                <th className="w-20 p-2">Rate</th>
-                <th className="w-20 p-2">GST %</th>
-                <th className="w-28 p-2">Amount</th>
+                <th className="w-24 p-2">Qty</th>
+                <th className="w-28 p-2">Rate</th>
+                <th className="w-24 p-2">GST %</th>
+                <th className="w-30 p-2">Amount</th>
                 <th className="w-28 p-2" />
               </tr>
             ) : (
@@ -174,7 +174,8 @@ export default function ItemTable(props: ItemTableProps) {
                         <input
                           type="number"
                           step="0.01"
-                          className="h-9 w-full rounded-md border bg-background px-3 py-2 text-sm"
+                          className="h-9 w-full min-w-[120px] rounded-md border bg-background px-3 py-2 text-sm"
+                          style={{ minWidth: '120px' }}
                           {...registerQuotation(`items.${index}.rate`, {
                             valueAsNumber: true,
                           })}
@@ -242,7 +243,8 @@ export default function ItemTable(props: ItemTableProps) {
                       <input
                         type="number"
                         step="0.01"
-                        className="h-9 w-full rounded-md border bg-background px-3 py-2 text-sm"
+                        className="h-9 w-full min-w-[120px] rounded-md border bg-background px-3 py-2 text-sm"
+                        style={{ minWidth: '120px' }}
                         {...registerInvoice(`items.${index}.rate`, {
                           valueAsNumber: true,
                         })}
