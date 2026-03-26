@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import BlogHub from "./pages/BlogHub";
@@ -10,6 +10,9 @@ import BlogCaseStudy from "./pages/BlogCaseStudy";
 import ActiveHarmonicFilters from "./pages/ActiveHarmonicFilters";
 import UPSMaintenance from "./pages/UPSMaintenance";
 import InfraredThermography from "./pages/InfraredThermography";
+import BusinessWork from "./businessWork/pages/BusinessWork";
+import QuotationPage from "./businessWork/pages/QuotationPage";
+import InvoicePage from "./businessWork/pages/InvoicePage";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +29,11 @@ const App = () => (
           <Route path="/blog/active-harmonic-filters" element={<ActiveHarmonicFilters />} />
           <Route path="/blog/ups-preventive-maintenance" element={<UPSMaintenance />} />
           <Route path="/blog/infrared-thermography" element={<InfraredThermography />} />
+          <Route path="/BusinessWork" element={<BusinessWork />}>
+            <Route index element={<Navigate to="quotation" replace />} />
+            <Route path="quotation" element={<QuotationPage />} />
+            <Route path="invoice" element={<InvoicePage />} />
+          </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
