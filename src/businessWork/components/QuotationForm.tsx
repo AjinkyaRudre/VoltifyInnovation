@@ -148,10 +148,7 @@ export default function QuotationForm() {
           hsnCode: i.hsnCode,
           qty: i.qty,
           rate: i.rate,
-          gstPercent:
-            typeof (i as { gstPercent?: number }).gstPercent === "number"
-              ? (i as { gstPercent?: number }).gstPercent!
-              : defaultGstPercent,
+          gstPercent: Number.isFinite(i.gstPercent) ? Math.round(i.gstPercent * 100) / 100 : defaultGstPercent,
         })),
       });
     },

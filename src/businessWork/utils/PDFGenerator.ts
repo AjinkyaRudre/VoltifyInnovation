@@ -303,9 +303,9 @@ export async function generateQuotationPDF(
   const totals = computeQuotationTotals(data);
   doc.setFontSize(10);
   setBold(doc, true);
-  doc.text(`Subtotal ${formatMoneyPlain(totals.subtotal)}`, left, summaryY);
-  doc.text(`GST Total ${formatMoneyPlain(totals.gstAmount)}`, left, summaryY + 6);
-  doc.text(`Grand Total ${formatMoneyPlain(totals.grandTotal)}`, left, summaryY + 12);
+  doc.text(`Subtotal: ${formatINR(totals.subtotal)} Rs`, left, summaryY);
+  doc.text(`GST Total: ${formatINR(totals.gstAmount)} Rs`, left, summaryY + 6);
+  doc.text(`Grand Total: ${formatINR(totals.grandTotal)} Rs`, left, summaryY + 12);
   setBold(doc, false);
 
   // Company contact details (bottom block) - matching your screenshot.
@@ -588,17 +588,17 @@ export async function generateInvoicePDF(
   const summaryY = summaryStartY;
   doc.setFontSize(10);
   setBold(doc, false);
-  doc.text(`Taxable Amount: ${formatINR(totals.taxableAmount)}`, rightX, summaryY, {
+  doc.text(`Taxable Amount: ${formatINR(totals.taxableAmount)} Rs`, rightX, summaryY, {
     align: "right",
   });
-  doc.text(`GST Amount: ${formatINR(totals.gstAmount)}`, rightX, summaryY + 5, {
+  doc.text(`GST Amount: ${formatINR(totals.gstAmount)} Rs`, rightX, summaryY + 5, {
     align: "right",
   });
-  doc.text(`Discount: ${formatINR(totals.discount)}`, rightX, summaryY + 10, {
+  doc.text(`Discount: ${formatINR(totals.discount)} Rs`, rightX, summaryY + 10, {
     align: "right",
   });
   setBold(doc, true);
-  doc.text(`Final Total: ${formatINR(totals.finalTotal)}`, rightX, summaryY + 15, {
+  doc.text(`Final Total: ${formatINR(totals.finalTotal)} Rs`, rightX, summaryY + 15, {
     align: "right",
   });
   setBold(doc, false);

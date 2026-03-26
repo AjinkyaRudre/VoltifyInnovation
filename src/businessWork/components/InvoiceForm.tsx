@@ -186,7 +186,7 @@ export default function InvoiceForm() {
           qty: i.qty,
           hsn: i.hsn,
           rate: i.rate,
-          gstPercent: i.gstPercent,
+          gstPercent: Number.isFinite(i.gstPercent) ? Math.round(i.gstPercent * 100) / 100 : 18,
         })),
       });
     },
