@@ -45,6 +45,7 @@ const buildDefaultQuotation = (): QuotationFormData => ({
     notes: "",
   },
   signatureName: "Akash Dudhe",
+  narrative: "Thank you for your inquiry regarding electrical materials. Please find our most competitive quotation attached. We have ensured the best pricing while maintaining high quality and service standards.",
 });
 
 function validateQuotation(values: QuotationFormData) {
@@ -130,6 +131,7 @@ export default function QuotationForm() {
       gstPercent: values.gstPercent,
       terms: values.terms,
       signatureName: values.signatureName,
+      narrative: values.narrative,
       items: values.items.map((it) => ({
         ...it,
         amount: Number.isFinite(it.qty) && Number.isFinite(it.rate) ? it.qty * it.rate : 0,
@@ -473,6 +475,16 @@ export default function QuotationForm() {
                 <textarea
                   className="min-h-[80px] w-full rounded-md border bg-background px-3 py-2 text-sm"
                   {...register("terms.notes")}
+                />
+              </div>
+              <div>
+                <label className="mb-1 block text-xs font-medium text-muted-foreground">
+                  narrative
+                </label>
+                <textarea
+                  className="min-h-[80px] w-full rounded-md border bg-background px-3 py-2 text-sm"
+                  {...register("narrative")}
+                  placeholder="Enter the introductory text for the quotation"
                 />
               </div>
             </div>

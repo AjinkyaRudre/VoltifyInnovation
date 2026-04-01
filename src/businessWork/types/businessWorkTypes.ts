@@ -34,6 +34,7 @@ export interface QuotationFormData {
   gstPercent: number;
   terms: QuotationTerms;
   signatureName?: string;
+  narrative?: string;
 }
 
 export interface InvoiceParty {

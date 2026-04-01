@@ -54,9 +54,9 @@ const buildDefaultInvoice = (): InvoiceFormData => ({
   ],
   discount: 0,
   bankDetails: {
-    bankName: "",
-    accountNumber: "",
-    ifscCode: "",
+    bankName: "Indian Bank",
+    accountNumber: "7997191250",
+    ifscCode: "IDIB000K168",
   },
 });
 

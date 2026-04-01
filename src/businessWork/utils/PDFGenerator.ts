@@ -195,10 +195,9 @@ export async function generateQuotationPDF(
   y += 7;
 
   // Narrative lines (keeps spacing similar to your sample PDF)
-  const narrative = [
-    "Thank you for your inquiry regarding electrical materials.",
-    "Please find our most competitive quotation attached. We have ensured the best pricing while maintaining high quality and service standards.",
-  ];
+  const defaultNarrative = "Thank you for your inquiry regarding electrical materials. Please find our most competitive quotation attached. We have ensured the best pricing while maintaining high quality and service standards.";
+  const narrativeText = data.narrative || defaultNarrative;
+  const narrative = narrativeText.split('\n').filter(line => line.trim());
   const narrativeLines = narrative.flatMap((line) =>
     safeSplitLines(doc, line, usableWidth * 0.82)
   );
