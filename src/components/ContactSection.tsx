@@ -133,7 +133,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-dark-gray">Phone</h3>
-                    <p className="text-muted-foreground">+91-9970189950</p>
+                    <p className="text-muted-foreground">+91-9730582118</p>
                   </div>
                 </div>
               </CardContent>

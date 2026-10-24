@@ -1,7 +1,7 @@
 import jsPDF from "jspdf";
 import { autoTable } from "jspdf-autotable";
 import * as pdfjsLib from "pdfjs-dist";
-import pdfWorkerSrc from "pdfjs-dist/build/pdf.worker.min.mjs?url";
+import pdfWorkerSrc from "./pdfWorker.ts?worker&url";
 
 import letterheadPdfUrl from "../assets/letterhead01.pdf?url";
 import letterhead02PdfUrl from "../assets/Letterhead02.pdf?url";
@@ -308,7 +308,7 @@ export async function generateQuotationPDF(
   setBold(doc, false);
 
   // Company contact details (bottom block) - matching your screenshot.
-  const phoneText = "+91-9970189950";
+  const phoneText = "+91-9730582118";
   const emailText = "akash.dudhe@voltifyinnovation.in";
   const addressLines = [
     "SR No. 697, Flat No. B2, 1st Floor, Preetam Prakash Residency,",
@@ -396,6 +396,7 @@ export async function generateQuotationPDF(
 
   return doc.output("blob");
 }
+
 
 export async function generateInvoicePDF(
   data: InvoiceFormData
@@ -631,4 +632,3 @@ export async function generateInvoicePDF(
 
   return doc.output("blob");
 }
-

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 
-const phoneText = "+91-9970189950";
+const phoneText = "+91-9730582118";
 const emailText = "akash.dudhe@voltifyinnovation.in";
 const addressLines = [
   "SR No. 697, Flat No. B2, 1st Floor, Preetam Prakash Residency,",

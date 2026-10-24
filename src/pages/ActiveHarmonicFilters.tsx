@@ -308,7 +308,7 @@ const ActiveHarmonicFilters: React.FC = () => {
               benefit your facility.
             </p>
             <a
-              href={`https://wa.me/919970189950?text=${encodeURIComponent("Hi! I'm interested in learning more about Active Harmonic Filters. Can you help me improve my power quality?")}`}
+              href={`https://wa.me/919730582118?text=${encodeURIComponent("Hi! I'm interested in learning more about Active Harmonic Filters. Can you help me improve my power quality?")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-electric-blue font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"
