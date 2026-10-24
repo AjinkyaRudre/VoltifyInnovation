@@ -436,7 +436,7 @@ const UPSMaintenance: React.FC = () => {
               Reduce downtime. Protect your assets. Strengthen your power reliability.
             </p>
             <a
-              href={`https://wa.me/919970189950?text=${encodeURIComponent("Hi! I would like to schedule a UPS preventive maintenance assessment for my facility. Can you provide more details?")}`}
+              href={`https://wa.me/919730582118?text=${encodeURIComponent("Hi! I would like to schedule a UPS preventive maintenance assessment for my facility. Can you provide more details?")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-electric-blue font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition"

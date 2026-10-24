@@ -75,7 +75,7 @@ export const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-electric-blue mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300">+91-9970189950</p>
+                  <p className="text-gray-300">+91-9730582118</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -96,7 +96,7 @@ export const Footer = () => {
                 <a href="https://www.linkedin.com/company/voltify-innovation/" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin className="w-5 h-5 text-electric-blue hover:text-white transition" />
                 </a>
-                <a href="https://wa.me/919970189950" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/919730582118" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp className="w-5 h-5 text-green-500 hover:text-white transition" />
                 </a>
                 <a href="mailto:info@voltifyinnovation.in" target="_blank" rel="noopener noreferrer">
@@ -138,7 +138,7 @@ export const Footer = () => {
             </p>
             <div className="flex items-center space-x-6 mt-4 md:mt-0">
               <span className="text-sm text-gray-300">24/7 Emergency Support</span>
-              <span className="text-sm text-electric-blue font-semibold">+91-9970189950</span>
+              <span className="text-sm text-electric-blue font-semibold">+91-9730582118</span>
             </div>
           </div>
         </div>

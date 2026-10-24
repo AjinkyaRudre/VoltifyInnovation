@@ -19,7 +19,7 @@ export const Header = () => {
             href="tel:+919870189950" 
             className="text-sm hover:text-electric-blue transition-colors"
           >
-            +91-9970189950
+            +91-9730582118
           </a>
         </div>
         
@@ -41,7 +41,7 @@ export const Header = () => {
 
         {/* WhatsApp */}
         <a 
-          href="https://wa.me/919970189950" 
+          href="https://wa.me/919730582118" 
           target="_blank" 
           rel="noopener noreferrer"
         >
